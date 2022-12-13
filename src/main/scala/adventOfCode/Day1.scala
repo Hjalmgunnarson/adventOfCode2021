@@ -14,6 +14,7 @@ object Day1 extends App {
   println("Part 2: " + countIncreasingMeasurements(summed))
 
   def countIncreasingMeasurements(list: List[Int]): Int =
-    list.sliding(2).map { case a :: b :: Nil => if (b > a) 1 else 0 }.sum
+    list.sliding(2).map { case a :: b :: Nil if (b > a) =>  1
+    case _ => 0 }.sum
 
 }
